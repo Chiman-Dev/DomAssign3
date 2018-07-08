@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<script type="text/javascript">
+			function vibileAttr() {
+				var anchr=document.getElementById('google');//Fetch element with ID google
+				var eleID = anchr.getAttribute("id"); //fetch attribute details
+				var targetdetails = anchr.getAttribute("target");
+				var linkdetails = anchr.getAttribute("href");
+				var elementDiv = document.getElementById('attrs');
+				elementDiv.innerHTML="Element ID: "+eleID + " Target: "+targetdetails + " Link to navigate: "+linkdetails;//set the div inner Html with attribute details 
+			}
+			function removeDetails() {
+				var elementDiv = document.getElementById('attrs');
+				elementDiv.innerHTML="";
+			}
+		</script>
+
+	</head>
+	<body>
+		<a id="google" target="_self" href="https://www.w3resource.com/">google</a>
+		<div id="attrs"></div>
+		<br>
+		<button id="visible" onclick="vibileAttr()">Show Attributes Of link</button>
+		<button id="hiding" onclick="removeDetails()">Remove Result</button>
+	</body>
+</html>
